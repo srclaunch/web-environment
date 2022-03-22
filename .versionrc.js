@@ -1,5 +1,5 @@
-const base = require('@srclaunch/dx/.versionrc');
+import base from '@srclaunch/dx/.versionrc';
 
-module.exports = {
+export default {
   ...base
 };

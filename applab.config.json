@@ -1,7 +1,7 @@
 {
   "build": [{
     "buildDir": "dist",
-    "buildFile": "index.es.js",
+    "buildFile": "index.js",
     "buildTypes": false,
     "bundle": false,
     "codeSplitting": false,
