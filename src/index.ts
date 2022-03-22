@@ -17,7 +17,7 @@ const testEnvironment: Environment = {
 };
 
 const prodEnvironment: Environment = {
-  id: 'prod',
+  id: 'production',
   type: EnvironmentType.Production,
   public: true,
   name: 'Production',
