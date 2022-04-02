@@ -16,7 +16,15 @@ const testEnvironment: Environment = {
   description: 'Test environment',
 };
 
-const prodEnvironment: Environment = {
+const previewEnvironment: Environment = {
+  id: 'preview',
+  type: EnvironmentType.NonProduction,
+  public: true,
+  name: 'Preview',
+  description: 'Preview environment',
+};
+
+const productionEnvironment: Environment = {
   id: 'production',
   type: EnvironmentType.Production,
   public: true,
@@ -32,9 +40,11 @@ export function getEnvironment() {
       return devEnvironment;
     } else if (hostname.includes('test')) {
       return testEnvironment;
+    } else if (hostname.includes('preview')) {
+      return previewEnvironment;
+    } else if (hostname.includes('production')) {
+      return productionEnvironment;
     }
-
-    return prodEnvironment;
   }
 
   return testEnvironment;
