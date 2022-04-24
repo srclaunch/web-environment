@@ -15086,43 +15086,42 @@ var LongTextCondition = ((LongTextCondition2) => {
 })(LongTextCondition || {});
 
 const devEnvironment = {
+  description: "Development environment",
   id: "dev",
-  type: EnvironmentType.Development,
-  public: false,
   name: "Development",
-  description: "Development environment"
+  type: EnvironmentType.Development
 };
 const testEnvironment = {
+  description: "Test environment",
   id: "test",
-  type: EnvironmentType.NonProduction,
-  public: false,
   name: "Test",
-  description: "Test environment"
+  type: EnvironmentType.NonProduction
 };
 const previewEnvironment = {
+  description: "Preview environment",
   id: "preview",
-  type: EnvironmentType.NonProduction,
-  public: true,
   name: "Preview",
-  description: "Preview environment"
+  type: EnvironmentType.NonProduction
 };
 const productionEnvironment = {
+  description: "Production environment",
   id: "production",
-  type: EnvironmentType.Production,
-  public: true,
   name: "Production",
-  description: "Production environment"
+  type: EnvironmentType.Production
 };
 function getEnvironment() {
   if (window) {
     const hostname = window.location.hostname;
     if (hostname.includes("localhost") || hostname.includes("127.0.0.1")) {
       return devEnvironment;
-    } else if (hostname.includes("test")) {
+    }
+    if (hostname.includes("test")) {
       return testEnvironment;
-    } else if (hostname.includes("preview")) {
+    }
+    if (hostname.includes("preview")) {
       return previewEnvironment;
-    } else if (hostname.includes("production")) {
+    }
+    if (hostname.includes("production")) {
       return productionEnvironment;
     }
   }

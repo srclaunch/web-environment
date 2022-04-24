@@ -1,35 +1,31 @@
 import { Environment, EnvironmentType } from '@srclaunch/types';
 
 const devEnvironment: Environment = {
-  id: 'dev',
-  type: EnvironmentType.Development,
-  public: false,
-  name: 'Development',
   description: 'Development environment',
+  id: 'dev',
+  name: 'Development',
+  type: EnvironmentType.Development,
 };
 
 const testEnvironment: Environment = {
-  id: 'test',
-  type: EnvironmentType.NonProduction,
-  public: false,
-  name: 'Test',
   description: 'Test environment',
+  id: 'test',
+  name: 'Test',
+  type: EnvironmentType.NonProduction,
 };
 
 const previewEnvironment: Environment = {
-  id: 'preview',
-  type: EnvironmentType.NonProduction,
-  public: true,
-  name: 'Preview',
   description: 'Preview environment',
+  id: 'preview',
+  name: 'Preview',
+  type: EnvironmentType.NonProduction,
 };
 
 const productionEnvironment: Environment = {
-  id: 'production',
-  type: EnvironmentType.Production,
-  public: true,
-  name: 'Production',
   description: 'Production environment',
+  id: 'production',
+  name: 'Production',
+  type: EnvironmentType.Production,
 };
 
 export function getEnvironment() {
@@ -38,11 +34,17 @@ export function getEnvironment() {
 
     if (hostname.includes('localhost') || hostname.includes('127.0.0.1')) {
       return devEnvironment;
-    } else if (hostname.includes('test')) {
+    }
+
+    if (hostname.includes('test')) {
       return testEnvironment;
-    } else if (hostname.includes('preview')) {
+    }
+
+    if (hostname.includes('preview')) {
       return previewEnvironment;
-    } else if (hostname.includes('production')) {
+    }
+
+    if (hostname.includes('production')) {
       return productionEnvironment;
     }
   }
