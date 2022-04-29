@@ -1,29 +1,29 @@
-import { Environment, EnvironmentType } from '@srclaunch/types';
+import { Environment,Environments, EnvironmentType } from '@srclaunch/types';
 
 const devEnvironment: Environment = {
   description: 'Development environment',
-  id: 'dev',
+  id: Environments.Development,
   name: 'Development',
   type: EnvironmentType.Development,
 };
 
 const testEnvironment: Environment = {
   description: 'Test environment',
-  id: 'test',
+  id: Environments.QA,
   name: 'Test',
   type: EnvironmentType.NonProduction,
 };
 
 const previewEnvironment: Environment = {
   description: 'Preview environment',
-  id: 'preview',
+  id:Environments.Preview,
   name: 'Preview',
   type: EnvironmentType.NonProduction,
 };
 
 const productionEnvironment: Environment = {
   description: 'Production environment',
-  id: 'production',
+  id: Environments.Production,
   name: 'Production',
   type: EnvironmentType.Production,
 };

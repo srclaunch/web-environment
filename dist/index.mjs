@@ -14059,6 +14059,14 @@ var SubRegion = /* @__PURE__ */ ((SubRegion2) => {
   offset: TimezoneOffset.UTC_PLUS_10,
   timezone: Timezones.ChuukTime
 });
+
+var Environments = /* @__PURE__ */ ((Environments2) => {
+  Environments2["Development"] = "development";
+  Environments2["QA"] = "qa";
+  Environments2["Preview"] = "preview";
+  Environments2["Production"] = "production";
+  return Environments2;
+})(Environments || {});
 var EnvironmentType = /* @__PURE__ */ ((EnvironmentType2) => {
   EnvironmentType2["Development"] = "Development";
   EnvironmentType2["NonProduction"] = "NonProduction";
@@ -15086,25 +15094,25 @@ var LongTextCondition = ((LongTextCondition2) => {
 
 const devEnvironment = {
   description: "Development environment",
-  id: "dev",
+  id: Environments.Development,
   name: "Development",
   type: EnvironmentType.Development
 };
 const testEnvironment = {
   description: "Test environment",
-  id: "test",
+  id: Environments.QA,
   name: "Test",
   type: EnvironmentType.NonProduction
 };
 const previewEnvironment = {
   description: "Preview environment",
-  id: "preview",
+  id: Environments.Preview,
   name: "Preview",
   type: EnvironmentType.NonProduction
 };
 const productionEnvironment = {
   description: "Production environment",
-  id: "production",
+  id: Environments.Production,
   name: "Production",
   type: EnvironmentType.Production
 };
