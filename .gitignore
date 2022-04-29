@@ -1,10 +1,11 @@
+
 # dotenv file
 .env
 
 # Mac OS artifacts
 .DS_Store
 
-# Node dependencies
+# NPM dependencies
 node_modules
 
 # Yarn 2 files
