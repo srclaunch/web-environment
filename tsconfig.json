@@ -1,5 +1,5 @@
 {
   "extends": "@srclaunch/dx/tsconfig.json",
-  "include": ["src/**/*"],
-  "exclude": ["src/tests"]
+  "include": ["src/**/*", "src/browser-env.d.ts"],
+  "exclude": ["src/__tests__"]
 }

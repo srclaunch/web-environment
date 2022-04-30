@@ -1,4 +1,4 @@
-import { Environment,Environments, EnvironmentType } from '@srclaunch/types';
+import { Environment, Environments, EnvironmentType } from '@srclaunch/types';
 
 const devEnvironment: Environment = {
   description: 'Development environment',
@@ -16,7 +16,7 @@ const testEnvironment: Environment = {
 
 const previewEnvironment: Environment = {
   description: 'Preview environment',
-  id:Environments.Preview,
+  id: Environments.Preview,
   name: 'Preview',
   type: EnvironmentType.NonProduction,
 };
@@ -30,6 +30,7 @@ const productionEnvironment: Environment = {
 
 export function getEnvironment() {
   if (window) {
+    console.log('window', window.location.hostname);
     const hostname = window.location.hostname;
 
     if (hostname.includes('localhost') || hostname.includes('127.0.0.1')) {
@@ -43,11 +44,7 @@ export function getEnvironment() {
     if (hostname.includes('preview')) {
       return previewEnvironment;
     }
-
-    if (hostname.includes('production')) {
-      return productionEnvironment;
-    }
   }
 
-  return testEnvironment;
+  return productionEnvironment;
 }

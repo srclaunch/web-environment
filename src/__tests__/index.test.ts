@@ -3,10 +3,10 @@ import test from 'ava';
 import { getEnvironment } from '../index.js';
 
 test('returns development environment', t => {
-  // @ts-expect-error
-  process = {
-    env: {
-      NODE_ENV: 'dev',
+  global.window = {
+    // @ts-ignore
+    location: {
+      hostname: 'localhost',
     },
   };
 
@@ -16,10 +16,10 @@ test('returns development environment', t => {
 });
 
 test('returns production environment', t => {
-  // @ts-expect-error
-  process = {
-    env: {
-      NODE_ENV: 'production',
+  global.window = {
+    // @ts-ignore
+    location: {
+      hostname: 'production.somesite.com',
     },
   };
 
