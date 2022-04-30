@@ -30,7 +30,6 @@ const productionEnvironment: Environment = {
 
 export function getEnvironment() {
   if (window) {
-    console.log('window', window.location.hostname);
     const hostname = window.location.hostname;
 
     if (hostname.includes('localhost') || hostname.includes('127.0.0.1')) {
