@@ -46,9 +46,9 @@ devDependencies:
   eslint-plugin-prettier: 4.0.0
   prettier: 2.6.2
   standard-version: 9.3.2
-  '@srclaunch/cli': 0.1.430
+  '@srclaunch/cli': 0.1.434
   '@srclaunch/dx': 0.1.52
-  '@srclaunch/types': 0.1.146
+  '@srclaunch/types': 0.1.147
   eslint-config-stylelint: 15.1.0
   stylelint: 14.8.1
   stylelint-config-idiomatic-order: 8.1.0
