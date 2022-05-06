@@ -32,6 +32,7 @@ scripts:
   release: yarn srclaunch release
 devDependencies:
   '@types/node': 17.0.31
+  ava: 4.2.0
   '@microsoft/eslint-plugin-sdl': 0.2.0
   eslint: 8.14.0
   eslint-import-resolver-typescript: 2.7.1
