@@ -23,8 +23,8 @@ exports:
 scripts:
   yui: yarn upgrade-interactive
   qr: >-
-    yarn srclaunch changesets add --message "Quick release" && yarn srclaunch
-    release --push
+    yarn srclaunch changesets add --files "." --message "Quick release" --type
+    "chore" && yarn srclaunch release --push
   build: yarn srclaunch build
   test: yarn srclaunch test
   test:watch: yarn srclaunch test --watch
