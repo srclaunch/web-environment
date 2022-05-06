@@ -14,7 +14,7 @@ import {
   TestTool,
 } from '@srclaunch/types';
 
-export default {
+const config: Project = {
   name: '@srclaunch/web-environment',
   description: 'Web environment specific utilities for SrcLaunch applications',
   type: ProjectType.Library,
@@ -30,11 +30,11 @@ export default {
     },
     tool: TestTool.Ava,
   },
-  environment: {
+  environments: {
     development: {
       formatters: [CodeFormatterTool.Prettier],
       linters: [CodeLinterTool.ESLint],
-      staticTypes: [StaticTypingTool.TypeScript],
+      staticTyping: [StaticTypingTool.TypeScript],
     },
   },
   release: {
@@ -53,4 +53,6 @@ export default {
       types: true,
     },
   },
-} as Project;
+};
+
+export default config;
