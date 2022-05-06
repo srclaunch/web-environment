@@ -10,6 +10,7 @@ import {
   ProjectType,
   TestReporter,
   License,
+  TestTool,
 } from '@srclaunch/types';
 
 export default {
@@ -26,6 +27,7 @@ export default {
     coverage: {
       reporters: [TestReporter.Lcov, TestReporter.JSONSummary],
     },
+    tool: TestTool.Ava,
   },
   environment: {
     development: {
