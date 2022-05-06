@@ -32,7 +32,8 @@
     "test": "yarn srclaunch test",
     "test:watch": "yarn srclaunch test --watch",
     "test:coverage": "yarn srclaunch test --coverage",
-    "yui": "yarn upgrade-interactive"
+    "yui": "yarn upgrade-interactive",
+    "qr": "yarn srclaunch changesets add --message \"Quick release\" && yarn srclaunch release --push"
   },
   "devDependencies": {
     "@microsoft/eslint-plugin-sdl": "0.2.0",
