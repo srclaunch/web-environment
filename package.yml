@@ -2,7 +2,7 @@ name: '@srclaunch/web-environment'
 description: Web environment specific utilities for SrcLaunch applications
 author: Steven Bennett <steven@srclaunch.com>
 license: MIT
-version: 0.1.24
+version: 0.1.25
 engines:
   node: '>=16'
   yarn: '>=3.2.0'
@@ -46,11 +46,11 @@ devDependencies:
   eslint-plugin-prettier: 4.0.0
   prettier: 2.6.2
   standard-version: 9.3.2
-  '@srclaunch/cli': 0.1.435
+  '@srclaunch/cli': 0.1.461
   '@srclaunch/dx': 0.1.52
-  '@srclaunch/types': 0.1.148
+  '@srclaunch/types': 0.1.151
   eslint-config-stylelint: 15.1.0
-  stylelint: 14.8.1
+  stylelint: 14.8.2
   stylelint-config-idiomatic-order: 8.1.0
   stylelint-config-prettier: 9.0.3
   stylelint-config-recommended: 7.0.0
