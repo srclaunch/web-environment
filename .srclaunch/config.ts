@@ -6,8 +6,9 @@ import {
   CodeFormatterTool,
   CodeLinterTool,
   StaticTypingTool,
-  PackageAccess,
+  Project,
   ProjectType,
+  PublishAccess,
   TestReporter,
   License,
   TestTool,
@@ -37,20 +38,19 @@ export default {
     },
   },
   release: {
-    package: {
-      publish: {
-        access: PackageAccess.Public,
-        license: License.MIT,
-        registry: 'https://registry.npmjs.org/',
-      },
+    publish: {
+      access: PublishAccess.Public,
+      license: License.MIT,
+      registry: 'https://registry.npmjs.org/',
     },
   },
   requirements: {
     node: '>=16',
+    yarn: '>=3.2.0',
     srclaunch: {
       dx: true,
       cli: true,
       types: true,
     },
   },
-};
+} as Project;
