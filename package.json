@@ -3,7 +3,7 @@
   "description": "Web environment specific utilities for SrcLaunch applications",
   "author": "Steven Bennett <steven@srclaunch.com>",
   "license": "MIT",
-  "version": "0.1.35",
+  "version": "0.1.36",
   "engines": {
     "node": ">=16",
     "yarn": ">=3.2.0"
